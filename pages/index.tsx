@@ -1,5 +1,5 @@
 import { useState } from "react";
-import QueryProcessor, { whatsIsYourAndrewID } from "../utils/QueryProcessor";
+import QueryProcessor from "../utils/QueryProcessor";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
             }
           />
           <div className={styles.resultBox}>
-            {QueryProcessor(query) == "" ? whatsIsYourAndrewID(query) == "" ? "No Match" : whatsIsYourAndrewID(query) : QueryProcessor(query)}
+            {QueryProcessor(query) == "" ?  "No Match" : QueryProcessor(query)}
           </div>
         </div>
       </div>
