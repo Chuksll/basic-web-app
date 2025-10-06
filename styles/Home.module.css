@@ -7,6 +7,14 @@
   min-height: 100vh;
 }
 
+.pageCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -52,6 +60,54 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+}
+
+.largeInput {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--callout-border-rgb), 0.18);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+  outline: none;
+}
+
+.largeInput:focus {
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+  border-color: rgba(var(--card-border-rgb), 0.25);
+}
+
+.resultBox {
+  margin-top: 0.75rem;
+  padding: 0.7rem 1rem;
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(var(--callout-rgb), 0.35);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.14);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 520px; /* keep input and result aligned */
+}
+
+.inputColumn .largeInput {
+  width: 100%;
+}
+
+.inputColumn .resultBox {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card span {

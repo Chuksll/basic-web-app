@@ -13,3 +13,10 @@ export default function QueryProcessor(query: string): string {
 
   return "";
 }
+
+export function whatsIsYourAndrewID(query : string): string {
+  if (query.toLowerCase().includes("andrew id")) {
+    return "ichuksok";
+  }
+  return "";
+}
