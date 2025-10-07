@@ -15,6 +15,25 @@ export default function QueryProcessor(query: string): string {
     return "ichuksok";
   }
 
+  // Handle finding the largest of any 3 numbers
+  const largestMatch = query.match(/which of the following numbers is the largest:?\s*(\d+),?\s*(\d+),?\s*(\d+)/i);
+  if (largestMatch) {
+    const num1 = parseInt(largestMatch[1]);
+    const num2 = parseInt(largestMatch[2]);
+    const num3 = parseInt(largestMatch[3]);
+    const largest = Math.max(num1, num2, num3);
+    return largest.toString();
+  }
+
+  // Handle addition of two integers
+  const additionMatch = query.match(/what is (\d+) \+ (\d+)\?/i);
+  if (additionMatch) {
+    const num1 = parseInt(additionMatch[1]);
+    const num2 = parseInt(additionMatch[2]);
+    const result = num1 + num2;
+    return result.toString();
+  }
+
   return "";
 }
 
