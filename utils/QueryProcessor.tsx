@@ -26,7 +26,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   // Handle addition of two integers
-  const additionMatch = query.match(/what is (\d+) \+ (\d+)\?/i);
+  const additionMatch = query.match(/what is (\d+) plus (\d+)\?/i);
   if (additionMatch) {
     const num1 = parseInt(additionMatch[1]);
     const num2 = parseInt(additionMatch[2]);
